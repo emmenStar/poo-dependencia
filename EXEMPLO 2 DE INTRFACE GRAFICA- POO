@@ -1,0 +1,31 @@
+EXEMPLO2 DE INTERFACE GRAFICA
+
+package src;
+
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseMotionListener;
+
+import javax.swing.JFrame;
+
+public class Janela extends JFrame {
+	
+	public Janela(){
+		
+		setTitle("");
+		setSize(500,500);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
+		addMouseMotionListener(new MouseMotionListener(){
+			
+		public void mouseMoved(MouseEvent e) {
+		int x = e.getX();
+		int y = e.getY();
+		System.out.println(x + "-" + x);
+	}
+		public void mouseDragged(MouseEvent e) {
+			
+		}
+	});
+
+	}
+}
