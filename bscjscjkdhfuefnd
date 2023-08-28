@@ -1,0 +1,177 @@
+package poo;
+
+import java.awt.Component;
+import java.awt.Container;
+import java.awt.Dimension;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.ComponentListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+
+public class JanelaPrincipal extends JFrame implements ActionListener {
+	
+	
+	
+	private static final long serialVersionUID = 1L;
+		private JLabel display;
+		private JButton btn0, btn1, btn2, btnBackspace;
+		private Component btn3;
+		private Component btn4;
+		private Component btn5;
+		private Component btn6;
+		private Component btn7;
+		private Component btn8;
+		private JButton btn9;
+		private Component btn;
+		
+		public JanelaPrincipal() {
+			setTitle("Minha Janela");
+			setSize(600, 550);
+			setDefaultCloseOperation(EXIT_ON_CLOSE);
+			
+			Container container = getContentPane();
+			container.setLayout(null);
+			
+			inicializarComponentes();
+			
+			container.add(display);
+			container.add(btn0);
+			container.add(btn1);
+			container.add(btn2);
+			container.add(btn3);
+			container.add(btn4);
+			container.add(btn5);
+			container.add(btn6);
+			container.add(btn7);
+			container.add(btn8);
+			container.add(btn9);
+			
+			
+						
+			container.add(btnBackspace);
+		}
+		
+		public void inicializarComponentes() {
+			display = new JLabel("0");
+			display.setLocation(10, 10);
+			display.setSize(3*75, 85);
+			
+			final int altura = 75;
+			final int largura = 75;
+			Dimension dimensao = new Dimension(largura, altura);
+			
+			btn0 = new JButton("0");
+			btn0.setLocation(10, 100);
+			btn0.setSize(dimensao);
+			btn0.addActionListener(this);
+			
+			btn1 = new JButton("1");
+			btn1.setLocation(85, 100);
+			btn1.setSize(dimensao);
+			btn1.addActionListener(this);
+			
+			btn2 = new JButton("2");
+			btn2.setLocation(160, 100);
+			btn2.setSize(dimensao);
+			btn2.addActionListener(this);
+			
+			btn3 = new JButton("3");
+			btn3.setLocation(230, 100);
+			btn3.setSize(dimensao);
+		
+			btn4 = new JButton("4");
+			btn4.setLocation(10, 170);
+			btn4.setSize(dimensao);
+			
+			btn5 = new JButton("5");
+			btn5.setLocation(85, 170);
+			btn5.setSize(dimensao);
+			
+			btn6 = new JButton("6");
+			btn6.setLocation(160, 170);
+			btn6.setSize(dimensao);
+			
+			btn7 = new JButton("7");
+			btn7.setLocation(230, 170);
+			btn7.setSize(dimensao);
+			
+			btn8 = new JButton("8");
+			btn8.setLocation(260, 100);
+			btn8.setSize(dimensao);
+			
+			btn9 = new JButton("9");
+			btn9.setLocation(260,100);
+			btn9.addActionListener(this);
+			
+			
+			
+			
+			btnBackspace = new JButton("apagar");
+			btnBackspace.setLocation(310, 100);
+			btnBackspace.setSize(dimensao);
+			btnBackspace.addActionListener(this);
+		}
+
+		@Override
+		public void actionPerformed(ActionEvent e) {
+			
+			if(e.getSource() == btn0) {
+				String textoDisplay = display.getText();
+				textoDisplay = textoDisplay + "0";
+				display.setText(textoDisplay);
+			} else if(e.getSource() == btn1) {
+				String textoDisplay = display.getText();
+				textoDisplay = textoDisplay + "1";
+				display.setText(textoDisplay);
+				
+			}else if(e.getSource() == btn2) {
+				String textoDisplay = display.getText();
+				textoDisplay = textoDisplay + "2";
+				display.setText(textoDisplay);
+				
+			}else if(e.getSource() == btn3) {
+				String textoDisplay = display.getText();
+				textoDisplay = textoDisplay + "3";
+				display.setText(textoDisplay);
+				
+			}else if(e.getSource() == btn4) {
+				String textoDisplay = display.getText();
+				textoDisplay = textoDisplay + "4";
+				display.setText(textoDisplay);
+				
+			}else if(e.getSource() == btn5) {
+				String textoDisplay = display.getText();
+				textoDisplay = textoDisplay + "5";
+				display.setText(textoDisplay);
+				
+			}else if(e.getSource() == btn6) {
+				String textoDisplay = display.getText();
+				textoDisplay = textoDisplay + "6";
+				display.setText(textoDisplay);
+				
+			}else if(e.getSource() == btn7) {
+				String textoDisplay = display.getText();
+				textoDisplay = textoDisplay + "7";
+				display.setText(textoDisplay);
+				
+			}else if(e.getSource() == btn8) {
+				String textoDisplay = display.getText();
+				textoDisplay = textoDisplay + "8";
+				display.setText(textoDisplay);
+				
+			}else if(e.getSource() == btn9) {
+				String textoDisplay = display.getText();
+				textoDisplay = textoDisplay + "9";
+				display.setText(textoDisplay);
+			
+			} else if(e.getSource() == btnBackspace) {
+				String textoDisplay = display.getText();
+				textoDisplay = textoDisplay.substring(0, textoDisplay.length()-1);
+				display.setText(textoDisplay);
+			}
+		}
+	}
+
