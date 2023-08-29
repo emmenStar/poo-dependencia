@@ -1,0 +1,9 @@
+public class JanelaPrincipal {
+	
+	public static void main(String[] args) { 
+
+		  Calculadora janela = new Calculadora();
+		janela.setVisible(true);
+	}
+
+}
