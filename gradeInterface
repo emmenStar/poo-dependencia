@@ -1,0 +1,41 @@
+package maisuum;
+
+import java.awt.Container;
+import java.awt.GridLayout;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+public class Grade extends JFrame{
+	
+	 private JButton btnA, btnB, btnC, btnD, btnE;
+	 
+	 public Grade() {
+		 
+		 setTitle("exemplo");
+		 setSize(300,300);
+		 setDefaultCloseOperation(EXIT_ON_CLOSE);
+		 Container container = getContentPane();
+		 GridLayout layout = new GridLayout(3, 3, 5, 5);
+		 
+		 btnA = new JButton("A");
+		 btnB = new JButton("B");
+		 btnC = new JButton("C");
+		 btnC = new JButton("D");
+		 btnC = new JButton("E");
+		 
+		 container.add(btnA);
+		 container.add(btnB);
+		 container.add(btnC);
+		 container.add(btnD);
+		 
+		 
+		
+		 
+		 
+	 }
+
+
+		
+	}
+	 
