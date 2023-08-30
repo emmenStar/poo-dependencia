@@ -1,0 +1,66 @@
+package poo;
+
+import java.awt.Container;
+import java.awt.FlowLayout;
+import java.awt.event.ItemEvent;
+
+import javax.swing.ButtonGroup;
+import javax.swing.JFrame;
+import javax.swing.JRadioButton;
+	
+		
+		public class ExemploFlow extends JFrame {
+			/**
+			 * 
+			 */
+			private static final long serialVersionUID = 1L;
+			private JRadioButton rb1, rb2, rb3;
+			private FlowLayout layout;	
+			
+			public ExemploFlow() {
+
+				setTitle("Exemplo");
+				setSize(400, 150);
+				setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+				Container container = getContentPane();
+				layout = new FlowLayout(FlowLayout.CENTER, 10, 5);
+				container.setLayout(layout);
+
+			rb1 = new JRadioButton("LEFT");
+			rb2 = new JRadioButton("CENTER");
+			rb2.setSelected(true);
+			rb3 = new JRadioButton("RIGHT");
+
+			rb1.addItemListener(rb1);
+			rb2.addItemListener(rb2);
+			rb3.addItemListener(rb3);
+			
+			container.add(rb1);
+			container.add(rb2);
+			container.add(rb3);
+			
+			ButtonGroup grupo = new ButtonGroup();
+			grupo.add(rb1);
+			grupo.add(rb2);
+			grupo.add(rb3);
+			
+			}	
+ 
+			public void itemStateChanged(ItemEvent e) {
+				if (rb1.isSelected()) {
+					layout.setAlignment(FlowLayout.LEFT);
+					layout.layoutContainer(getContentPane());
+				}else {
+				
+			}
+			public static void main(String[] args) {
+
+				FlowLayout exemplo = new FlowLayout();
+				exemplo.setVisible(true);
+
+			}
+
+	}
+
+
+
