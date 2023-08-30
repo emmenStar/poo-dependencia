@@ -1,0 +1,13 @@
+package maisuum;
+
+public class Grade extends JFrame{
+	
+	 private JButton btnA, btnB, btnC, btnD, btnE;
+	 
+	 public Grade() {
+		 setTitle("exemplo");
+		 setSize(300,300);
+		 	 
+	 }
+		
+	}
