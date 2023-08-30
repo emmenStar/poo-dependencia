@@ -1,0 +1,17 @@
+package poo2;
+
+import java.awt.BorderLayout;
+import java.awt.Container;
+
+import javax.swing.JLabel;
+
+public class Borda {
+    
+	private JLabel IbiNorth, IbiSouth, IbiWest, IbiLest, IbiCenter;
+	BorderLayout  layout  = new BorderLayout(5, 15);
+	Container container = getContentPane();
+	private Container getContentPane();
+	
+	container.setLayout(layout);
+	
+}
